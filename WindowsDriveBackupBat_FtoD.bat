@@ -12,7 +12,7 @@ SET ExcludeFile=/XF *$~* *~$* *~WRL* *.tmp *.temp IMG00001.DAT *.bkf *.qic *.iso
 SET ExcludeDir=/XD "Application Data" "System Volume Information" $RECYCLE.BIN $Windows.~BT Temp MSOCache PerfLogs Logs System32 Intel McAfee Panther PLA Tasks ReportArchive WinSxS "Package Cache" Packages ProgramData Cookies Windows.old
 
 REM バックアップドライブ名（以下5行はドライブ毎に使いまわせる）
-SET DrvName=E
+SET DrvName=F
 cd %DrvName%:\
 md %DstName%%DrvName%
 robocopy %DrvName%: "%DstName%%DrvName%" %OPTION% %ExcludeDir% %ExcludeFile% /log:"%DstName%%LOGNAME%_%DrvName%.log"
